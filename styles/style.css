@@ -1,0 +1,157 @@
+h1, h2, h3, p {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 85px 768px 720px 519px 600px 275px;
+  grid-template-areas: "header" "sections" "sections" "sections" "sections" "footer";
+}
+
+.header-container {
+  height: 85px;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 85px;
+}
+.header-container .header-logo {
+  padding-left: 160px;
+  align-self: center;
+  justify-self: self-start;
+}
+.header-container .header-menu {
+  padding: 0 20px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  gap: 65px;
+}
+.header-container .header-buttons {
+  display: flex;
+  padding-right: 100px;
+  align-self: center;
+  justify-self: self-end;
+  gap: 23px;
+}
+
+.main-section-container {
+  grid-area: sections;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "section-first" "section-second";
+}
+.main-section-container .first-section {
+  grid-area: section-first;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-image: url(../img/background-main.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  gap: 55px;
+}
+.main-section-container .first-section .main-offer {
+  grid-area: 1/1;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: end;
+}
+.main-section-container .first-section .main-offer h1 {
+  font-weight: 400;
+  font-size: 45px;
+  margin: 0;
+  min-width: 343px;
+}
+.main-section-container .first-section .main-offer h2 {
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0;
+}
+.main-section-container .first-section .main-offer p {
+  font-size: 14px;
+  max-width: 258px;
+}
+.main-section-container .first-section .main-offer a {
+  font-weight: 500;
+  font-size: 12px;
+  align-self: flex-start;
+  border: 25px solid #444240;
+  color: white;
+  background-color: #444240;
+}
+.main-section-container .first-section .offer-image {
+  display: flex;
+  flex-direction: row;
+}
+.main-section-container .first-section .offer-image .price {
+  min-width: 58px;
+  padding-top: 138px;
+  align-self: baseline;
+}
+.main-section-container .first-section .offer-image .info {
+  min-width: 122px;
+  padding: 0 100px 100px 0;
+  align-self: flex-end;
+}
+
+.second-section {
+  grid-area: section-second;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.second-section h1 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 42px;
+}
+.second-section a {
+  align-self: end;
+  padding: 0 90px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.second-section .line {
+  border: 1px solid #C4C0B6;
+  max-width: 100px;
+  align-self: end;
+  padding: 0 90px;
+}
+.second-section .modeles-container {
+  padding: 0 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.second-section .modeles-container .product-card {
+  text-align: start;
+}
+
+.store-baner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-container {
+  grid-area: footer;
+  display: grid;
+  background-color: #444240;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 275px;
+}
+
+/*# sourceMappingURL=style.css.map */
