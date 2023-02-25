@@ -3,6 +3,11 @@ h1, h2, h3, p{
     font-family: 'Roboto', sans-serif;
 }
 
+h1,h2{
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+}
+
 a{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -65,7 +70,8 @@ a{
 
     grid-template-areas: 
     "section-first"
-    "section-second";
+    "section-second"
+    "section-third";
 
     .first-section{
         grid-area: section-first;
@@ -83,6 +89,7 @@ a{
         .main-offer{
             grid-area: 1/1;
 
+            padding: 0 50px;
             display: flex;
             flex-direction: column;
             align-self: center;
@@ -124,11 +131,15 @@ a{
                 min-width: 58px;
                 padding-top: 138px;
                 align-self: baseline;
+                font-family: 'Prata', sans-serif;
+                font-size: 16px;
             }
             .info{
                 min-width: 122px;
                 padding: 0 100px 100px 0;
                 align-self: flex-end;
+                font-family: 'Prata', sans-serif;
+                font-size: 16px;
             }
         }
     }
@@ -171,15 +182,82 @@ a{
 
         .product-card{
             text-align: start;
+
+            h2{
+                font-weight: 700;
+                font-size: 14px;
+            }
+            p{
+                font-family: 'Prata', sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+            }
         }
     }
 }
 
 .store-baner{
+    grid-area: section-third;
+
+    padding-top: 52px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+
+    background-image: url('../img/background_banner_1.png');
+    background-position: left;
+    background-repeat: no-repeat;
+
+    .baner-img{
+        max-width: 521px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding-left: 100px;
+
+        .baner-buttons{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-self: end;
+        }
+    }
+
+    .baner-info{
+        height: 414px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/lines_banner.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .txt-wraper{
+            padding: 0 50px;
+            max-width: 500px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 12px;
+                font-weight: 500;
+                height: 64px;
+                width: 205px;
+                border: 1px solid #D4B098;
+                background-color: #D4B098;
+            }
+        }
+    }
 }
 
 .footer-container{
