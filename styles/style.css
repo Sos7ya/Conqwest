@@ -13,6 +13,11 @@ a {
   color: black;
 }
 
+.line {
+  height: 2px;
+  width: 50px;
+}
+
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -52,7 +57,7 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "section-first" "section-second" "section-third";
+  grid-template-areas: "section-first" "section-second" "section-third" "section-four";
 }
 .main-section-container .first-section {
   grid-area: section-first;
@@ -72,6 +77,10 @@ a {
   align-self: center;
   justify-self: end;
 }
+.main-section-container .first-section .main-offer .line {
+  position: relative;
+  padding-bottom: 10px;
+}
 .main-section-container .first-section .main-offer h1 {
   font-weight: 400;
   font-size: 45px;
@@ -84,8 +93,12 @@ a {
   margin: 0;
 }
 .main-section-container .first-section .main-offer p {
+  text-align: justify;
+  line-height: 21px;
+  font-weight: 300;
   font-size: 14px;
   max-width: 258px;
+  max-height: 34px;
 }
 .main-section-container .first-section .main-offer a {
   font-weight: 500;
@@ -100,22 +113,32 @@ a {
   flex-direction: row;
 }
 .main-section-container .first-section .offer-image .price {
-  min-width: 58px;
+  min-width: 135px;
   padding-top: 138px;
   align-self: baseline;
   font-family: "Prata", sans-serif;
   font-size: 16px;
 }
+.main-section-container .first-section .offer-image .price .line {
+  width: 35px;
+  padding-bottom: 5px;
+  position: relative;
+}
 .main-section-container .first-section .offer-image .info {
-  min-width: 122px;
+  min-width: 170px;
   padding: 0 100px 100px 0;
   align-self: flex-end;
   font-family: "Prata", sans-serif;
   font-size: 16px;
 }
+.main-section-container .first-section .offer-image .info .line {
+  padding-bottom: 5px;
+  width: 35px;
+}
 
 .second-section {
   grid-area: section-second;
+  margin: 30px 30px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -127,15 +150,15 @@ a {
 }
 .second-section a {
   align-self: end;
-  padding: 0 90px;
+  padding: 0 60px;
   font-size: 16px;
   font-weight: 500;
 }
 .second-section .line {
-  border: 1px solid #C4C0B6;
-  max-width: 100px;
-  align-self: end;
-  padding: 0 90px;
+  position: relative;
+  width: 100px;
+  align-self: flex-end;
+  padding-right: 50px;
 }
 .second-section .modeles-container {
   padding: 0 70px;
@@ -156,6 +179,10 @@ a {
   font-family: "Prata", sans-serif;
   font-size: 12px;
   font-weight: 400;
+}
+.second-section .modeles-container .product-card .line {
+  width: 30px;
+  padding: 0;
 }
 
 .store-baner {
@@ -213,9 +240,83 @@ a {
   border: 1px solid #D4B098;
   background-color: #D4B098;
 }
+.store-baner .baner-info .txt-wraper p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.fouth-section {
+  grid-area: section-four;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.fouth-section .social-links {
+  display: flex;
+  flex-direction: column;
+  margin: 0 70px;
+}
+.fouth-section .social-links h2 {
+  max-width: 471px;
+  max-height: 33px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 42px;
+}
+.fouth-section .social-links p {
+  max-width: 376px;
+  max-height: 43px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.fouth-section .social-links .icons {
+  align-items: end;
+  justify-content: end;
+  padding-top: 124px;
+}
+.fouth-section .social-links .icons img {
+  padding: 0 18px;
+}
+.fouth-section .photo-galery {
+  max-width: 600px;
+  max-height: 460px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.fouth-section .photo-galery img {
+  height: 100%;
+  width: 100%;
+}
+.fouth-section .photo-galery .galery-item--1 {
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.fouth-section .photo-galery .galery-item--2 {
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.fouth-section .photo-galery .galery-item--3 {
+  margin: auto;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 
 .footer-container {
   grid-area: footer;
+  color: white;
   display: grid;
   background-color: #444240;
   grid-template-columns: 1fr 1fr 1fr 1fr;
