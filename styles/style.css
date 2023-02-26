@@ -171,6 +171,10 @@ a {
 .second-section .modeles-container .product-card {
   text-align: start;
 }
+.second-section .modeles-container .product-card .product-image {
+  background-image: url(../icons/Ellipse.svg);
+  background-repeat: no-repeat;
+}
 .second-section .modeles-container .product-card h2 {
   font-weight: 700;
   font-size: 14px;
@@ -316,11 +320,31 @@ a {
 
 .footer-container {
   grid-area: footer;
-  color: white;
   display: grid;
   background-color: #444240;
+  align-items: self-start;
+  justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 275px;
+}
+.footer-container a {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+.footer-container h2 a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer-container p a {
+  color: rgba(255, 255, 255, 0.7490196078);
+}
+.footer-container img {
+  margin: 1em 0;
 }
 
 /*# sourceMappingURL=style.css.map */
